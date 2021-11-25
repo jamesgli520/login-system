@@ -8,7 +8,7 @@ function App() {
   async function registerUser(event){
     event.preventDefault()
 
-    const response = await fetch('http://localhost:3000/api/register',{
+    const response = await fetch('http://localhost:8080/register',{
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -20,8 +20,8 @@ function App() {
       }),
     })
     const data = await response.json()
-
     console.log(data)
+    
   }
 
 

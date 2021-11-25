@@ -10,7 +10,7 @@ app.use(express.json())
 
 mongoose.connect('mongodb://localhost:27017/login-system')
 
-app.post('/api/register', async(req, res) => {
+app.post('/register', async(req, res) => {
     console.log(req.body)
     try{
         const hashedPassword = await bcrypt.hash(req.body.password, 10)
@@ -49,6 +49,6 @@ app.post('/api/login', async (req, res) => {
     
 })
 
-app.listen(3000, () =>{
-    console.log('Server started on 3000')
+app.listen(8080, () =>{
+    console.log('Server started on 8080')
 })
